@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+
+    <style>
+        #back{
+            
+            position: relative;
+            width: 100%;
+            height: 100%;
+            
+        }
+        
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        #texto-centro{
+            position: absolute;
+            top: 40%;
+            left: 45%;
+            transform: translate(-40%,-45%);
+            color: white;
+            font-size: 25px;
+            font-family: sans-serif;
+            text-align: center ;    
+        }
+
+        #foto-netflix{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #sobreposição-foto{
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(20, 20, 20, 0.81 );
+        }
+
+        #logo{
+            top: 51px;
+            left: 14.4%;
+            transform: translateX(-14.4%) skewX(-10deg);
+            position: absolute;
+            
+        }
+        #botao-entrar{
+            cursor: pointer;
+            background-color: red;
+            color: white !important;
+            position: absolute;
+            padding: 10px 20px;
+            top: 51px;
+            left: 90%;
+            outline: none;
+            font-family: sans-serif;
+            text-decoration: none;
+            border-radius: 0.25rem;
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+           
+        }
+        #botao-entrar:hover{
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            background-color: darkred;
+        }
+        #assinatura{
+            font-family: sans-serif;
+            color: white;
+            top: 60%;
+            left: 57%;
+            font-size: 20px;
+            transform: translate(-60%, -57%);
+            position: absolute;
+            white-space: nowrap;
+        }
+        #botao-começar{
+            background-color: red;  
+            color: white;
+            margin: 0px;
+            padding: 0.80rem 0;
+            position: absolute;
+            top: 80%;
+            left: 77%;
+            transform: translate(-80%, -77%);
+            cursor: pointer;
+            outline: none;
+            font-family: sans-serif;
+            font-size: 1.5rem;
+            appearance: none;
+            font-weight: 200;
+            border: 0;
+            border-radius: 0.25rem;
+            width: 180px;;
+            height: 60px;
+        }
+        #botao-começar:hover{
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            background-color: darkred;
+        }
+        #caixa-de-texto{
+            position: absolute;
+            top: 78%;
+            left: 56%;
+            transform: translate(-78%, -56%);
+            background-color: white;
+            padding: 0.80rem 0;
+            height: 27px;
+            width: 580px;
+            border: 0;
+            border-radius: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="back">
+
+        <img id="foto-netflix" src="https://assets.nflxext.com/ffe/siteui/vlv3/93da5c27-be66-427c-8b72-5cb39d275279/76fcd07f-b171-49c7-8a77-6177ad5a6122/BR-pt-20240226-popsignuptwoweeks-perspective_alpha_website_medium.jpg" 
+        alt="tela-inicial-Netflix">
+        
+        <div id="sobreposição-foto">
+
+        </div>
+
+        <div id="texto-centro">
+            <h1>Filmes, séries e muito mais. <br>
+                        Sem limites.        
+            </h1>
+
+            <p id="texto-assista"><b>Assista aonde quiser. Cancele quando quiser.</b></p>
+        </div>
+
+        <div id="assinatura">
+            <p>Pronto para assistir? Informe seu e-mai para criar sua conta ou renovar sua assinatura.</p>
+        </div>
+
+        <div id="logo">
+            <img src="logo-netflix.jpeg" alt="logo Netflix>">
+        </div>
+
+        <div >
+            <a id="botao-entrar" href="https://www.netflix.com/br/login"><b>ENTRAR</b></a>
+        </div>
+    </div>
+    <div>
+        <button id="botao-começar" onclick="confirmar()">
+           <b>Vamos lá</b>
+        </button>
+        <input type="text" id="caixa-de-texto" placeholder="Digite seu email">
+    </div>
+
+    <script>
+        function confirmar(){
+            var email= document.getElementById('caixa-de-texto').value;
+            var link= 'https://www.netflix.com/signup?locale=pt-BR';
+            window.location.href=link;
+        }
+        </script>
+</body>
+</html>
